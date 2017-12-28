@@ -1,0 +1,17 @@
+
+关键字：
+     Angularjs IE11 $window.location.href $location.url
+背景：
+     Angularjs + IE11+前后端请求回调函数
+现象：
+     1. 使用Angular的$resource实现前后端请求。
+     2. JS请求回调函数中调用$window.location.href("/firstPage");
+     3. firstPage页面被重复加载多次->firstPage的Ctrl被多次加载->Ctrl中获取列表请求被多次加载->页面卡死
+ 解决方案：
+      1.使用Angular的$location 进行处理
+      2.将$window.location.href("/firstPage") 换成 $location.url("/firstPage");
+      
+  错误代码复现：
+      createNew
+    
+
