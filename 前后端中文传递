@@ -1,0 +1,40 @@
+# JS/JAVA/Python 汉字传递
+
+## 关键字
+JavaScript   JAVA   Python  中文字符传递
+    
+## 背景
+前后端数据传递中文 JS--JAVA--Python
+    
+## 场景
+- js或者html传递的url中包含中文字符，传递给java中文乱码
+- JAVA转换编码后的%，Python不能识别
+ 
+## 解决方案
+> JavaScript： encodeURI
+JAVA ： decode
+python ： urllib
+
+JavaScript
+```javascript
+ encodeURI(encodeURI（"北京"）)
+```    
+JAVA
+```Java
+ URLDecoder.decode("北京","utf8");
+```
+此时是：
+%E5%8C%97%E4%BA%AC
+这个格式python不识别
+```sh
+urllib.unqote("%E5%8C%97%E4%BA%AC")
+```
+结果：'\xe5\x8c\x97\xe4\ba\ac'
+
+**注意:**
+- "+"在进行解码时，会变成空格。
+    - 解决方法：在JS端使用“%2B”替换空格
+-  JAVA 使用URLDecode.decode时需要抛出 UnsupportedencodingException异常
+    - 解决方案 ：
+        public static String doCreate（） `throws UnsupportedencodingException`{
+		}
