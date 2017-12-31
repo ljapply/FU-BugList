@@ -5,7 +5,7 @@
 不过懒人更新频率极低。也许明天就会不再更新。
 
 ## List
-1. $setViewValue表单验证.md :Angularjs /$setViewValue /$render / 表单验证不能自动清空
+1. $setViewValue表单验证.md(https://github.com/ljapply/FU-BugList/blob/master/%24setViewValue%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81.md) :Angularjs /$setViewValue /$render / 表单验证不能自动清空
 2. 前后端中文传递.md :JavaScript JAVA Python 中文字符传递
 3. 深浅拷贝.md :深拷贝 浅拷贝 Angularjs
 4. 页面延缓加载.md: $timeout display
