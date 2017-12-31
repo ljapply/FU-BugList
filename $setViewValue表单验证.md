@@ -22,18 +22,18 @@ Angularjs  数据格式化  自定义命令不更新
 ## 解决方案
 ```javascript
 $scope.onSelectItem = function($item){
-        var inputItem = angular.element(document.querySelector('#inputItem'));
-        var ngModelCtrl = inputUser.controller('ngModel');
-        ngModelCtrl.$setViewValue($item.Name);
-        ngModelCtrl.$render();
-    };
+    var inputItem = angular.element(document.querySelector('#inputItem'));
+    var ngModelCtrl = inputUser.controller('ngModel');
+    ngModelCtrl.$setViewValue($item.Name);
+    ngModelCtrl.$render();
+};
 ```    
 ## 遗留问题
 ### 问题1
 如果input少的话，可以这样一个个的使用，如果input的内容很多，将怎么优化呢？如上场景3
 尝试过使用
 ```javascript
-	$scope.myForm.$setPristine();
-     $scope.myform.$setUntouched();
+$scope.myForm.$setPristine();
+$scope.myform.$setUntouched();
 ```
 无效
