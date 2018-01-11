@@ -36,7 +36,27 @@ html 中style的 :{{lengthValue}}在chrome中正确赋值，在IE11中无法识�
  - 如果是字符串，多个类名使用空格分隔。
  - 如果是对象，需要使用 key-value 对，key 为你想要添加的类名，value 是一个布尔值。只有在 value 为 true 时类才会被添加。
  ```html
-ng-class="{'style1': value1, 'style2':value2 }"
+ng-class="{'style1': boolvalue1, 'style2':boolvalue2 }"
 ```
  - 如果是数组，可以由字符串或对象组合组成，数组的元素可以是字符串或对象
+ 
+ 
+### tips
+** tips1 **. 可定义 class的名称为 `show-{{varValue}}-style`，其中`varValue` 是一个变量，可在js中进行赋值：
+ 
+> 代码：
+```html
+ <div class="show-{{varValue}}-style"></div>
+```
+```javascript
+$scope.varValue = boolValue ? "first" : "second";
+```
+```css
+.show-first-style{
+	color: red;
+}
+.show-second-style{
+	color: blue;
+}
+```
     
